@@ -1,6 +1,8 @@
 package kr.re.kitri.lucidDream.controller;
 
+import kr.re.kitri.lucidDream.model.Article;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,14 +23,33 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 public class BbsController {
 
+    /*
+    * 전체보기
+    * @return
+     */
     @RequestMapping("/bbs")
     public String viewAll() {
-        return "view_all";
+        return "bbs/view_all";
+    }
+
+    /*
+    *
+     */
+    @RequestMapping("/bbs/{articleId}")
+    public ModelAndView viewDitail(
+            @PathVariable("articleId") String articleId
+    ){
+        ModelAndView mav = new ModelAndView();
+
+        mav.setViewName("bbs/view_detail");
+        mav.addObject("articleId", articleId);
+
+        return mav;
     }
 
     @RequestMapping(value = "/bbs/write", method = RequestMethod.GET )
     public String write() {
-        return "write";
+        return "bbs/write";
     }
 
     /*
@@ -51,24 +72,14 @@ public class BbsController {
     */
 
     @RequestMapping(value = "/bbs/write", method = RequestMethod.POST)
-    public ModelAndView doWrite(
-            @RequestParam("article_id") String articleId,
-            @RequestParam("title") String title,
-            @RequestParam("author") String author,
-            @RequestParam("content") String content
-    ) {
+    public ModelAndView doWrite(Article article) {
 
-        System.out.println(articleId);
-        System.out.println(title);
-        System.out.println(author);
-        System.out.println(content);
+        System.out.println(article);
+
 
         ModelAndView mav = new ModelAndView();
-        mav.setViewName("do_write");
-        mav.addObject("articleId",articleId);
-        mav.addObject("title",title);
-        mav.addObject("author",author);
-        mav.addObject("content",content);
+        mav.setViewName("bbs/do_write");
+        mav.addObject("article",article);
 
         return mav;
 
