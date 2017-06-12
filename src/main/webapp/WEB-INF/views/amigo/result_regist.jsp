@@ -18,9 +18,9 @@
 <h3>Amigo 등록완료</h3>
 
 <ul>
-    <li>친구 이름: ${amigoName}</li>
-    <li>핸드폰: ${amigoPhone}</li>
-    <li>이메일: ${amigoEmail}</li>
+    <li>친구 이름: ${amigo.amigoName}</li>
+    <li>핸드폰: ${amigo.amigoPhone}</li>
+    <li>이메일: ${amigo.amigoEmail}</li>
 </ul>
 
 </body>

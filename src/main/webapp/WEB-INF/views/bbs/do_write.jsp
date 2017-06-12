@@ -17,10 +17,10 @@
 <h1>다음과 같이 등록되었습니다.</h1>
 
 <ul>
-    <li>글번호: ${articleId}</li>
-    <li>제목: ${title}</li>
-    <li>작성자: ${author}</li>
-    <li>내용: ${content}</li>
+    <li>글번호: ${article.articleId}</li>
+    <li>제목: ${article.title}</li>
+    <li>작성자: ${article.author}</li>
+    <li>내용: ${article.content}</li>
 </ul>
 </body>
 </html>

@@ -1,5 +1,6 @@
 package kr.re.kitri.lucidDream.controller;
 
+import kr.re.kitri.lucidDream.model.Amigo;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,6 +32,7 @@ public class AmigoController {
     }
 
 
+    /*
     @RequestMapping(value = "/amigo/regist", method = RequestMethod.POST)
     public ModelAndView result_regist(
             @RequestParam("amigoName") String amigoName,
@@ -45,6 +47,17 @@ public class AmigoController {
         mav.addObject("amigoPhone", amigoPhone);
         mav.addObject("amigoEmail", amigoEmail);
 
+
+        return mav;
+    }
+    */
+
+    @RequestMapping(value = "/amigo/regist", method = RequestMethod.POST)
+    public ModelAndView result_regist(Amigo amigo){
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("amigo/result_regist");
+
+        mav.addObject("Amigo",amigo);
 
         return mav;
     }
