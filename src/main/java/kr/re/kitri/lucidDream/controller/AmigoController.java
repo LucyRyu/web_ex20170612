@@ -23,10 +23,10 @@ public class AmigoController {
     @RequestMapping("/amigo/{amigoName}")
     public ModelAndView regist_name(
             @PathVariable("amigoName") String amigoName
-    ){
+    ) {
         ModelAndView mav = new ModelAndView();
         mav.setViewName("amigo/regist_name");
-        mav.addObject("amigoName",amigoName);
+        mav.addObject("amigoName", amigoName);
 
         return mav;
     }
@@ -53,11 +53,11 @@ public class AmigoController {
     */
 
     @RequestMapping(value = "/amigo/regist", method = RequestMethod.POST)
-    public ModelAndView result_regist(Amigo amigo){
+    public ModelAndView result_regist(Amigo amigo) {
         ModelAndView mav = new ModelAndView();
         mav.setViewName("amigo/result_regist");
 
-        mav.addObject("Amigo",amigo);
+        mav.addObject("Amigo", amigo);
 
         return mav;
     }
