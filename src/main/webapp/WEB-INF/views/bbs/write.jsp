@@ -45,6 +45,7 @@
                 <textarea name="content"  class="form-control" placeholder="내용"></textarea>
             </div>
             <p><input type="submit" class="btn btn-lg btn-success"></p></form>
+        <p><a href="/bbs"> 취소 </a> </p>
     </div>
 
     <div class="row marketing">

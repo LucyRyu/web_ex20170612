@@ -10,16 +10,6 @@ public class Article {
     private String author;
     private String content;
 
-    @Override
-    public String toString() {
-        return "Article{" +
-                "articleId='" + articleId + '\'' +
-                ", title='" + title + '\'' +
-                ", author='" + author + '\'' +
-                ", content='" + content + '\'' +
-                '}';
-    }
-
     public String getArticleId() {
         return articleId;
     }
@@ -50,5 +40,15 @@ public class Article {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    @Override
+    public String toString() {
+        return "Article{" +
+                "articleId='" + articleId + '\'' +
+                ", title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", content='" + content + '\'' +
+                '}';
     }
 }

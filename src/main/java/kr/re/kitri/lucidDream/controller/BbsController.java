@@ -1,14 +1,15 @@
 package kr.re.kitri.lucidDream.controller;
 
+import kr.re.kitri.lucidDream.common.MockArticle;
 import kr.re.kitri.lucidDream.model.Article;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * /bbs ..전체보기
@@ -28,8 +29,14 @@ public class BbsController {
     * @return
      */
     @RequestMapping("/bbs")
-    public String viewAll() {
-        return "bbs/view_all";
+    public ModelAndView viewAll() {
+
+        //전체보기를 하기 위한 데이터를 가져온다.
+        MockArticle mock = new MockArticle();
+        List<Article> list = mock.getArticles();
+
+        return new ModelAndView("bbs/view_all")
+                .addObject("list",list);
     }
 
     /*

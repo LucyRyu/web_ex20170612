@@ -22,5 +22,7 @@
     <li>작성자: ${article.author}</li>
     <li>내용: ${article.content}</li>
 </ul>
+
+<a href="/bbs">전체 글 보기</a>
 </body>
 </html>
