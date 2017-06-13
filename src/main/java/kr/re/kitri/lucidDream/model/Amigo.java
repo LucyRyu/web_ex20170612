@@ -8,15 +8,6 @@ public class Amigo {
     private String amigoPhone;
     private String amigoEmail;
 
-    @Override
-    public String toString() {
-        return "Amigo{" +
-                "amigoName='" + amigoName + '\'' +
-                ", amigoPhone='" + amigoPhone + '\'' +
-                ", amigoEmail='" + amigoEmail + '\'' +
-                '}';
-    }
-
     public String getAmigoName() {
         return amigoName;
     }
@@ -40,4 +31,14 @@ public class Amigo {
     public void setAmigoEmail(String amigoEmail) {
         this.amigoEmail = amigoEmail;
     }
+
+    @Override
+    public String toString() {
+        return "Amigo{" +
+                "amigoName='" + amigoName + '\'' +
+                ", amigoPhone='" + amigoPhone + '\'' +
+                ", amigoEmail='" + amigoEmail + '\'' +
+                '}';
+    }
+
 }
