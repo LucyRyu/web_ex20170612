@@ -14,7 +14,8 @@
     <title>Title</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="/asset/main.css">
+
+    <link rel="stylesheet" href="/asset/css/main.css">
     <link rel="stylesheet" href="/asset/css/bootstrap.css/">
 
 </head>
@@ -30,7 +31,7 @@
 </c:forEach>
 
 <a href="/bbs/write">글 쓰기</a>
-    <script src="asset/css/js/jquery-3.2.1.js"></script>
-    <script src="asset/css/js/bootstrap.js"></script>
+    <script src="/asset/js/jquery-3.2.1.js"></script>
+    <script src="/asset/js/bootstrap.js"></script>
 </body>
 </html>
